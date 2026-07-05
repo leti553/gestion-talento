@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestión de Talento</title>
+</head>
+<body>
+    <h1>Panel de Gestión de Talento</h1>
+    <p>Bienvenido. Aquí aparecerán los empleados y sus habilidades.</p>
+    
+    <ul>
+    {% for empleado in empleados %}
+        <li>{{ empleado.apellidos }}, {{ empleado.nombre }} - {{ empleado.puesto }}</li>
+    {% empty %}
+        <li>No hay empleados registrados o no tienes permisos para verlos.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
